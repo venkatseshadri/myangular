@@ -1,10 +1,10 @@
 var express = require("express");
 var bodyParser = require("path");
 
-var CONTACTS_COLLECTION = "contacts";
-
 var app = express();
-app.use(bodyParser.json());
+app.use(express.static(__dirname + '/dist'));
+
+const path = require('path');
 
 
 // Initialize the app.
@@ -13,4 +13,9 @@ var port = server.address().port;
 console.log("App now running on port", port);
 });
 
-// CONTACTS API ROUTES BELOW
+// ...
+// For all GET requests, send back index.html
+// so that PathLocationStrategy can be used
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname + '/dist/index.html'));
+});
