@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-	"postinstall": "ng build --aot --prod"
+    "postinstall": "ng build --aot --prod"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +22,7 @@
     "@angular/platform-browser": "~8.2.0",
     "@angular/platform-browser-dynamic": "~8.2.0",
     "@angular/router": "~8.2.0",
+    "@ng-bootstrap/ng-bootstrap": "^5.1.0",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "mongodb": "^3.3.0-beta2",
@@ -50,7 +51,7 @@
     "@angular-devkit/build-angular": "~0.802.0"
   },
   "engines": {
-  "node": "10.16.2",
-  "npm": "6.9.0"
+    "node": "10.16.2",
+    "npm": "6.9.0"
   }
 }
